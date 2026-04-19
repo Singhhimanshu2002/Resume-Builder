@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="form-section">
+            <h1>Resume Builder</h1>
+            
+            <!-- Personal Info -->
+            <section>
+                <h2>Personal Information</h2>
+                <input type="text" id="name" placeholder="Full Name">
+                <input type="text" id="title" placeholder="Professional Title">
+                <input type="email" id="email" placeholder="Email">
+                <input type="tel" id="phone" placeholder="Phone">
+                <input type="text" id="location" placeholder="Location">
+                <textarea id="linkedin" placeholder="LinkedIn URL"></textarea>
+            </section>
+
+            <!-- Summary -->
+            <section>
+                <h2>Professional Summary</h2>
+                <textarea id="summary" placeholder="Write a brief professional summary..."></textarea>
+            </section>
+
+            <!-- Experience -->
+            <section>
+                <h2>Work Experience</h2>
+                <div id="experience-list">
+                    <!-- Dynamic entries added here -->
+                </div>
+                <button onclick="addExperience()">+ Add Experience</button>
+            </section>
+
+            <!-- Education -->
+            <section>
+                <h2>Education</h2>
+                <div id="education-list">
+                    <!-- Dynamic -->
+                </div>
+                <button onclick="addEducation()">+ Add Education</button>
+            </section>
+
+            <!-- Skills -->
+            <section>
+                <h2>Skills</h2>
+                <input type="text" id="skills" placeholder="Comma-separated skills (e.g., JavaScript, Python, React)">
+            </section>
+
+            <!-- Projects -->
+            <section>
+                <h2>Projects</h2>
+                <div id="projects-list">
+                    <!-- Dynamic -->
+                </div>
+                <button onclick="addProject()">+ Add Project</button>
+            </section>
+
+            <button onclick="updatePreview()" class="update-btn">Update Preview</button>
+            <button onclick="printResume()" class="print-btn">Print/Download PDF</button>
+        </div>
+
+        <div class="preview-section">
+            <div id="preview" class="resume-preview">
+                <h1>Resume Preview</h1>
+                <p>Fill the form to see your resume here.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
